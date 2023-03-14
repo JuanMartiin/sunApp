@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="adminarea.css" type="text/css" />
+    <title>Admin Area EcoZaidin</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="divlogo">
+            <img src="./images/logo.png" alt="logo" class="logo">
+            <h1 class="logotext">EcoZaidín</h1>
+        </div>
+        <ul class="menu">
+            <li class="menuitem">
+                <p>Server Stats</p>
+                <img src="./images/flechaboton.png" class="imgbot"></img>
+            </li>
+            <li class="menuitem">
+                <p>Panel Stats</p>
+                <img src="./images/flechaboton.png" class="imgbot"></img>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menuitem">
+                <p>Admin Settings</p>
+                <img src="./images/flechaboton.png" class="imgbot"></img>
+            </li>
+            <li class="menuitem">
+                <p>Profile</p>
+                <img src="./images/flechaboton.png" class="imgbot"></img>
+            </li>
+        </ul>
+    </div>
+
+            <nav>
+                <ul>
+                    <li class="push"><p>Admin Section</p> <a href="#"><img src="./images/login.png"></img></a>
+                        <ul>
+                            <li><a href="#">Log Out</a></li>
+                            <li><a href="#">Messages</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </li>
+        
+                </ul>
+            </nav>
+            
+            <div class="formAtts">
+                <h1>Modify Axys</h1>
+                <h2>Modify X</h2>
+                <div>
+                    <input type="number" name="X" min="0" max="180"/>
+                    degrees
+                </div>
+                <h2>Modify Y</h2>
+                <div>
+                    <input type="number" name="X" min="0" max="180"/>
+                    degrees
+                </div>
+                <h2>Modify Z</h2>
+                <div>
+                    <input type="number" name="X" min="0" max="180"/>
+                    degrees
+                </div>
+            </div>
+            
+            <div class="formAtts2">
+                <h1>Battery</h1>
+                <label for="file">In time Charge:</label>
+                <progress id="file" max="100" value="5"> 50% </progress>
+                <div class="button">Turn Off</div>
+            </div>
+            
+            <div class="formAtts3">
+                <h1>Camera</h1>
+                <div class="button">View</div>
+            </div>
+</body>
+</html>

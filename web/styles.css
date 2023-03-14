@@ -1,0 +1,576 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------------- Nav --------------------------*/
+html{
+    scroll-behavior:smooth;
+}
+
+.header{
+    width:100%;
+    height:1080px;
+    background-image:url(./images/nature.jpg);
+    
+    background-size:cover;
+}
+
+nav{
+
+    height: 100px;
+    width: 100%;
+
+    display:flex;
+
+    flex-wrap: nowrap;
+    color:white;
+    padding-left:50px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    align-items: center;
+	justify-content: space-between;
+	align-content: center;
+	background-color:rgba(0,0,0, 0.0);
+}
+.divlogo{
+    display:flex;
+    flex-wrap:nowrap;
+
+    align-items:center;
+}
+.logotext{
+    font-size:40px !important;
+    padding-left:10px !important;
+    padding-top:20px !important;
+    color:#61cdb6 !important;
+}
+.smallmenu{
+    display: none;
+}
+nav>ul{
+    display:flex;
+    width: 80px;
+    min-width: 500px;
+	align-items: center;
+
+	justify-content: space-evenly;
+	align-content: center;
+}
+nav ul li{
+    font-family:Montserrat;
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+    position: relative;
+    text-shadow: 1px 1px 2px black;
+    width:300px;
+
+
+    padding-top:10px;
+    
+    display:flex;
+    flex-flow:row;
+    align-content:center;
+    align-items:center;
+    gap:20px;
+        transition: all 0.2s linear;
+}
+.push{
+    margin-left:225px;
+}
+nav ul li:hover{
+    color:#61cdb6;
+    cursor:pointer;
+}
+nav ul li p:before {
+    position: absolute;
+    bottom: 30px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all .3s;
+    left:0;
+
+}
+nav ul li p:hover:before{
+    width: 65;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    height:80px;
+    width:60px;
+}
+.logo:hover{
+    cursor:pointer;
+}
+
+nav ul li a img{
+    height:60px;
+    width:60px;
+}
+/*------------------------- Menú despleglable -------------------------*/
+
+nav ul li>ul {
+ display:none;
+ width:200px !important;
+ position:absolute;
+ top:100%;
+ left:-100;
+ padding:0;
+ 
+
+ box-sizing:border-box;
+ margin:0px;
+ padding:0px;
+
+}
+
+/* items del menu desplegable */
+
+nav ul li ul li {
+ float:none;
+ width:200px !important;
+ height:50px;
+
+ font-size:20px;
+ color:white;
+ margin:0px;
+ padding:0px;
+ background-color:rgba(97, 205, 182, .8);
+ transition:0.5s;
+}
+nav ul li ul li:hover{
+ color:white;
+ transform:scale(1.1,1.1);
+}
+
+
+/* enlaces de los items del menu desplegable */
+
+nav ul ul a {
+ line-height:120%;
+ padding:0px 10px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+nav ul li:hover > ul {
+ display:block;
+}
+
+
+/*------------------------- Titulo de seccion --------------------------*/
+
+
+.header h1{
+    font-family:Montserrat;
+    font-size:60px;
+    text-align:center;
+    font-weight:600;
+    color:white;
+    text-shadow:1px 1px 3px black;
+}
+
+.header>p{
+    font-family:Montserrat;
+    font-size:20px;
+    text-align:center;
+    font-weight:400;
+    color:white;
+    text-shadow:1px 1px 3px black;
+    margin-top:15px;
+}
+
+.contenthead{
+    margin-top:240px;
+}
+.button{
+    height:60px;
+    width:180px;
+    line-height:60px;
+    font-size:20px;
+    text-align:center;
+    font-weight:400;
+    color:white;
+    text-shadow:1px 1px 3px black;
+    border:3px solid #61cdb6;
+    background-color:rgba(97, 205, 182, .4);
+    
+    margin:40px auto;
+    transition-property:background-color;
+    transition-duration:0.5s;
+}
+.button:hover{
+    cursor:pointer;
+
+    background-color:#69e0c7;
+}
+.button img{
+    height:13px;
+    width:13px;
+    margin-left:5px;
+}
+.tituloseccion{
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow:column;
+    text-align: center;
+    align-items: center;
+	justify-content: space-evenly;
+	background-color:white;
+
+    padding-top:20px;
+}
+.tituloseccion h1{
+    font-size: 30px;
+    color: white;
+
+    font-family: Montserrat;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px grey;    
+}
+.tituloseccion h2{
+    font-size: 40px;
+    color: #69e0c7;
+    text-shadow: 2px 2px 5px grey;
+
+    font-family: Montserrat;
+    font-weight: 600;
+}
+.barratitulo{
+    height: 2px;
+    width: 250px;
+    background-color: white;
+}
+.black{
+    color:black !important;
+}
+.black2{
+        text-shadow: 1px 1px 3px black !important;
+}
+
+/*------------------------- Panel para mostrar el Sol --------------------------*/
+
+.sunframe{
+    height:728px;
+    width:100%;
+    background-color:cyan;
+
+    box-sizing:border-box;
+    
+}
+.marcoseccion{
+    background-color:cyan;
+}
+
+.marco{
+    height:38vw;
+    width:100%;
+    
+    overflow:hidden;
+    background-color: cyan;
+}
+        .orbit{
+            height:300%;
+            width:100%;
+            border-radius:50%;
+    
+            
+            position:relative;
+            animation: rotate-animation 10s infinite linear;
+        }
+        
+        @keyframes rotate-animation {
+        	0% {
+    	    	transform: rotate(0deg);
+            }
+            
+            50% {
+    		    transform: rotate(180deg);
+    	    }
+    	    
+        	100% {
+    		    transform: rotate(360deg);
+        	}
+        }
+
+
+
+.orbit>img{
+    height:80px;
+    width:80px;
+    position:absolute;
+}
+
+.sun{
+    top:45%;
+    left:-40px;
+}
+.moon{
+    top:45%;
+    left:98%;
+}
+
+.fondo2{
+    height:400px;
+    width:100%;
+    position:absolute;
+    top:1610px;
+    left:0px;
+}
+
+/*------------------------- Panel para mostrar datos del Sol --------------------------*/
+
+
+.data{
+    height:700px;
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    
+    background-color:rgba(240, 240, 240, .8);
+
+}
+.color2{
+    background-color:rgba(240, 240, 240, .8);
+}
+.datasquare{
+    height:500px;
+    width:500px;
+    transition:all .5s;
+    background-color:white;
+    padding:0 25px;
+    box-shadow:1px 1px 5px black;
+}
+.datasquare:hover{
+    transform:scale(1.1, 1.1);
+}
+
+.datasquare h1{
+    text-align:center;
+    font-size:30px;
+    color:black;
+    font-weight:600;
+    font-family:Montserrat;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.datasquare h2{
+    font-size:24px;
+    font-weight:500;
+    font-family:Montserrat;
+    color:blue;
+}
+.datasquare p{
+    font-size:24px;
+    color:black;
+    font-weight:400;
+    font-family:Montserrat;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.orange{
+    color:red !important;
+}
+
+
+.contenedor-pila{
+    width:475px;
+
+    display:flex;
+    align-items:center;
+    flex-flow:column;
+    
+} 
+
+#frame1 {
+    position:relative;
+    width: 23px;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg) rotateY(0deg) rotateZ(180deg);
+}
+
+.strips {
+    transform-style: preserve-3d;
+    transition: all 420ms;
+    height:140px;
+}
+
+.strips > div {
+    position: absolute;
+    top: -60px;
+    left: -12px;
+    margin-top: -10px;
+    background: rgba(40, 196, 37, .5); /* rgba(211, 211, 211, .5) */
+    border: solid rgba(36, 166, 33, 1);
+    border-width: 3px 0;
+    height: var(--altura); /* 140px */
+    width: 23px;
+}
+
+.strip-1 { transform: rotateY(0deg) translateZ(85px); }
+.strip-2 { transform: rotateY(15deg) translateZ(85px); }
+.strip-3 { transform: rotateY(30deg) translateZ(85px); }
+.strip-4 { transform: rotateY(45deg) translateZ(85px); }
+.strip-5 { transform: rotateY(60deg) translateZ(85px); }
+.strip-6 { transform: rotateY(75deg) translateZ(85px); }
+.strip-7 { transform: rotateY(90deg) translateZ(85px); }
+.strip-8 { transform: rotateY(105deg) translateZ(85px); }
+.strip-9 { transform: rotateY(120deg) translateZ(85px); }
+.strip-10 { transform: rotateY(135deg) translateZ(85px); }
+.strip-11 { transform: rotateY(150deg) translateZ(85px); }
+.strip-12 { transform: rotateY(165deg) translateZ(85px); }
+.strip-13 { transform: rotateY(180deg) translateZ(85px); }
+.strip-14 { transform: rotateY(195deg) translateZ(85px); }
+.strip-15 { transform: rotateY(210deg) translateZ(85px); }
+.strip-16 { transform: rotateY(225deg) translateZ(85px); }
+.strip-17 { transform: rotateY(240deg) translateZ(85px); }
+.strip-18 { transform: rotateY(255deg) translateZ(85px); }
+.strip-19 { transform: rotateY(270deg) translateZ(85px); }
+.strip-20 { transform: rotateY(285deg) translateZ(85px); }
+.strip-21 { transform: rotateY(300deg) translateZ(85px); }
+.strip-22 { transform: rotateY(315deg) translateZ(85px); }
+.strip-23 { transform: rotateY(330deg) translateZ(85px); }
+.strip-24 { transform: rotateY(345deg) translateZ(85px); }
+
+.colocar{
+    position:relative;
+    bottom:-200px;
+    left:40px;
+}
+
+.datasquare > img{
+    height:350px;
+    width:350px;
+    margin-left:15%;
+    margin-top:40px;
+}
+
+/*---------------------------- Gallery ------------------------------*/
+
+
+
+.gallery{
+    height:1200px;
+    width:100%;
+    box-sizing:border-box;
+    background-color:rgba(240, 240, 240, .8);
+    padding:80px 100px;
+    gap:40px;
+    
+    display:flex;
+    align-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:center;
+    
+
+}
+.color3{
+        background-color:rgba(240, 240, 240, .8);
+}
+
+.image {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);
+  height: 400px;
+  overflow: hidden;
+  margin: 15px auto;
+  position: relative;
+  width: 400px;
+}
+
+figure img {
+  border-radius: 5px;
+  height: 100%;
+  transition: all .23s ease;
+  width: 100%;
+}
+
+.image figcaption {
+  color: white;
+  font-family: 'Montserrat';
+  font-size:40px;
+  font-weight:600;
+  text-shadow:1px 1px 3px black;
+  height: 100%;
+  left: 0;
+  line-height: 250px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  transition: all .23s ease;
+  width: 100%;
+}
+
+.image.fade figcaption {
+  opacity: 0;
+  visibility: hidden;
+}
+.image.fade:hover > img {
+  opacity: 0.5;
+  visibility: visible;
+}
+
+.image.fade:hover > figcaption {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.gallery>img{
+    width:100px;
+    height:100px;
+}
